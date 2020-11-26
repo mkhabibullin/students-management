@@ -1,7 +1,7 @@
 import React from 'react';
 import { Students } from './features/students/Students';
 import { Home } from './features/home/Home';
-import './App.css';
+import './App.scss';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,6 +11,7 @@ import {
 
 function App() {
   return (
+    <div className={'theme ' + (1 ? 'theme--dark' : 'theme--default')}>
     <div className="App">
     <Router>
       <div>
@@ -34,6 +35,7 @@ function App() {
           </Route>
         </Switch>
     </Router>
+    </div>
     </div>
   );
 }
